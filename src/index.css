@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+.ListWowify_Cpnt h1 {
+	font-size: 2em;
+	margin: .67em 0;
+}
+
+.ListWowify_Cpnt {
+	box-sizing: border-box;
+	font-family: Pompei New W00 Light, serif;
+	font-size: 62.5%;
+	margin: 0;
+}
+
+.ListWowify_Cpnt div.store-map__result div.store-map__result-inner div.store-map__result-body {
+	width: 65%;
+}
+
+.ListWowify_Cpnt h1 {
+	margin: 0;
+}
+
+.ListWowify_Cpnt {
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 100%;
+	display: grid;
+}
+
+.ListWowify_Cpnt .store-map__result {
+	justify-content: center;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-right-style: solid;
+	color: #170202;
+	display: flex;
+	flex-basis: 100%;
+	padding: 15px 10px;
+	width: 100%;
+}
+
+.ListWowify_Cpnt .store-map__result-inner {
+	color: black;
+	font-family: 400 15px, 22px, Pompei New W00 Light, serif;
+	padding-left: 50px;
+	position: relative;
+	width: 100%;
+	min-width: 300px;
+	max-width: 300px;
+}
+
+.ListWowify_Cpnt .store-map__result-number {
+	-ms-flex-align: center;
+	align-items: center;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	color: black;
+	display: -ms-flexbox;
+	display: flex;
+	font-size: 16px;
+	height: 35px;
+	-ms-flex-pack: center;
+	justify-content: center;
+	left: 0;
+	line-height: 30px;
+	position: absolute;
+	text-align: center;
+	width: 32px;
+}
+
+.ListWowify_Cpnt .store-map__result-heading {
+	color: black;
+	font-family: 400 15px, 22px, Pompei New W00 Light, serif;
+	font-size: 2rem;
+	width: 65%;
+}
