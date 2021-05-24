@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { RaritySkilltoColorBorder } from '../Assets/convertion';
-import { capacitySkill, heroes, KeyValue, skill } from '../Assets/data';
+import { FormSkill } from './Forms';
 import ListHeroes from './ListHeroes';
-import { ListWowify } from './Package/Package';
 
 class App extends Component<any, { login: string, password: string }> {
   constructor(props: any) {
@@ -27,7 +25,10 @@ class App extends Component<any, { login: string, password: string }> {
           }} 
            >Submit</button> 
         </>
-        : <ListHeroes />
+        : <>
+          <ListHeroes />
+          <FormSkill/>
+        </>
       }
     </div>
   }
