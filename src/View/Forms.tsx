@@ -1,8 +1,6 @@
 import JSONSchemaForm from "@rjsf/material-ui"
 import { Component } from "react"
 import { formSkillScheme } from "../Assets/models";
-import { createTransport, createTestAccount, getTestMessageUrl } from "nodemailer";
-import { JSONSchemaObject } from "json-schema-strictly-typed"
 import { JSONSchema7 } from "json-schema";
 const Form = JSONSchemaForm;
 
