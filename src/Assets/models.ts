@@ -1,10 +1,9 @@
 const Arr_EffectOn_const = ["Hero", "Armies", "Building", "other"] as const;
 const Arr_RaritySkill_const = ["banal", "uncommon", "rare", "superRare", "god"] as const;
 const Arr_StatSkill_const = [
-    "Armor", "Charm", "Damage", "Speed",
-    "Intellect", "Wood", "Vitality", "Shield",
-    "Research", "Trade", "Treasure", "TreasureChaotic",
-    "King", "Food", "Drill", "other", "Dexterity", "Luck", "Empty", "Control", "HP"
+    "Armor", "Charm", "Control", "Damage", "DemonicChest", "Dextirity", "Drill", "Empty",
+    "FlameControl", "Food", "GodCharm", "Gold", "GoldChest", "HP", "Intellect", "Iron",
+    "King", "Research", "Shield", "Speed", "Trade", "Vitality", "WarChest", "Wood", "Strenght", "Luck"
 ] as const;
 
 const Arr_EffectOn = ["Hero", "Armies", "Building", "other"];
@@ -12,10 +11,9 @@ const Arr_RaritySkill = ["banal", "uncommon", "rare", "superRare", "god"];
 
 
 const Arr_StatSkill = [
-    "Armor", "Charm", "Damage", "Speed",
-    "Intellect", "Wood", "Vitality", "Shield",
-    "Research", "Trade", "Treasure", "TreasureChaotic",
-    "King", "Food", "Drill", "other", "Dexterity", "Luck", "Empty", "Control", "HP"
+    "Armor", "Charm", "Control", "Damage", "DemonicChest", "Dextirity", "Drill", "Empty",
+    "FlameControl", "Food", "GodCharm", "Gold", "GoldChest", "HP", "Intellect", "Iron",
+    "King", "Research", "Shield", "Speed", "Trade", "Vitality", "WarChest", "Wood", "Strenght", "Luck"
 ];
 
 
@@ -25,7 +23,7 @@ export type RaritySkill = typeof Arr_RaritySkill_const[number];
 export type StatSkill = typeof Arr_StatSkill_const[number]
 export type Star = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
 export interface CapacitySkillProps {
-    name: string;
+    name?: string;
     belongTo: string[];
     rarity: RaritySkill;
     stat: StatSkill;
@@ -33,7 +31,7 @@ export interface CapacitySkillProps {
         nbr: number;
         isPrct: boolean;
         stat: StatSkill;
-        detail: string;
+        detail?: string;
         on: EffectOn;
     }[]
 }
