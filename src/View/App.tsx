@@ -27,7 +27,7 @@ class App extends Component<any, { login: string, password: string }> {
         </>
         : <>
           <ListHeroes />
-          <FormSkill/>
+          {/* <FormSkill/> */}
         </>
       }
     </div>

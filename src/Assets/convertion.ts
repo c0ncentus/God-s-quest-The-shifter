@@ -1,7 +1,7 @@
 export const RaritySkilltoColorBorder = {
     banal: "grey",
-    uncommon: "green",
-    rare: "blue",
-    superRare: "purple",
+    uncommon: "#3fc208",
+    rare: "#009aed",
+    superRare: "#d100ed",
     god: "orange",
 }

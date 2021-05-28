@@ -3,17 +3,13 @@ import { Component } from "react"
 import { formSkillScheme } from "../Assets/models";
 import { JSONSchema7 } from "json-schema";
 const Form = JSONSchemaForm;
-
-
-interface ZZZProps { }
-interface ZZZState { }
 export class FormSkill extends Component<any, any>{
     constructor(props: any) {
         super(props)
         // this.state={s}
     }
     render() {
-        return <div style={{ width: 400 }}>
+        return <div style={{ width: "50vw" }}>
             <Form
                 schema={formSkillScheme as JSONSchema7}
                 uiSchema={{}}

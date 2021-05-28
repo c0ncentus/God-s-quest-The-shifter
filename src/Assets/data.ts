@@ -103,15 +103,6 @@ export const capacitySkill: CapacitySkillProps[] = [
             }
         ]
     },
-
-    {
-        belongTo: ["Heracles"],
-        effect: [
-            { nbr: 70, isPrct: true, stat: "Damage", on: "Hero", detail: "" },
-            { nbr: -90, isPrct: true, stat: "Control", detail: "", on: "Hero" }
-        ],
-        rarity: "rare", stat: "Damage", name: ""
-    },
     {
         "belongTo": ["Heracles"],
         "effect": [
@@ -120,6 +111,15 @@ export const capacitySkill: CapacitySkillProps[] = [
         ],
         name: "Curse of Hera", rarity: "uncommon", stat: "Charm"
     },
+    {
+        belongTo: ["Heracles"],
+        effect: [
+            { nbr: 70, isPrct: true, stat: "Damage", on: "Hero", detail: "" },
+            { nbr: -90, isPrct: true, stat: "Control", detail: "", on: "Hero" }
+        ],
+        rarity: "rare", stat: "Damage", name: ""
+    },
+
     {
         belongTo: ["Heracles"],
         effect: [
@@ -194,7 +194,60 @@ export const capacitySkill: CapacitySkillProps[] = [
         effect: [
             { "isPrct": true, "nbr": 50, "stat": "Damage", "on": "Armies", "detail": "Of every Branch" }
         ], rarity: "uncommon", stat: "Damage"
-    }
+    },
+    { "belongTo": ["Hermes"], "effect": [{ "nbr": 120, "isPrct": true, "stat": "Speed", on: "Hero" }], stat: "Speed", "rarity": "god" },
+    { "belongTo": ["Hermes"], "effect": [{ "nbr": 100, "isPrct": true, "stat": "Damage", "detail": "Cavlry Attacks the Rear of Cavalry and Damage", "on": "Armies" }], "rarity": "superRare", "stat": "WarChest" },
+    { "belongTo": ["Uranus"], "effect": [{ "nbr": 150, "isPrct": true, "stat": "Wood", "detail": "When assigned to Sawmil", "on": "Building" }], "rarity": "god", "stat": "Wood" },
+    { "belongTo": ["Uranus"], "effect": [{ "nbr": -50, "isPrct": true, "stat": "DemonicChest", "detail": "Food Cost of Every Branch", "on": "Armies" }], "rarity": "god", "stat": "DemonicChest" },
+    { "belongTo": ["Uranus"], "effect": [{ "nbr": 4, "isPrct": false, "stat": "King", "detail": "Level of More Intel +4 when assigned to Castle", "on": "Building" }], "rarity": "god", "stat": "King" },
+    { "belongTo": ["Uranus"], "effect": [{ "nbr": 750, "isPrct": true, "stat": "Armor", "detail": "Light Armor of Light Cavalry", "on": "Armies" }], "rarity": "god", "stat": "Shield" },
+    { "belongTo": ["Cronus"], "effect": [{ "nbr": -20, "isPrct": true, "stat": "Trade", "detail": "Tade Cooldown when assigned to Trade Post", "on": "Building" }], "rarity": "god", "stat": "Trade" },
+    { "belongTo": ["Cronus"], "effect": [{ "nbr": 150, "isPrct": true, "stat": "Food", "detail": "When assigned to Farm", "on": "Building" }, { "nbr": 100, "isPrct": true, "stat": "Wood", "detail": "When assigned to Farm", "on": "Building" }], "rarity": "god", "stat": "Food" },
+    { "belongTo": ["Cronus"], "effect": [{ "nbr": 2000, "isPrct": false, "stat": "Damage", "detail": "When assigned to Farm", "on": "Hero" }], "rarity": "god", "stat": "DemonicChest" },
+    {
+        "belongTo": ["Cronus"],  effect: [
+            { "nbr": 40000, "isPrct": false, "stat": "Food", "detail": "When assigned to Castle", "on": "Building" }, 
+            { "nbr": 40000, "stat": "Wood", isPrct: false,  "detail": "When assigned to Castle", "on": "Building" }
+        ],  "rarity": "god", "stat": "DemonicChest"
+    },
+    { "belongTo": ["Chaos"], "effect": [{ "nbr": 3000000, "isPrct": false, "stat": "Luck", "detail": "Load Capacity", "on": "Hero" }], "rarity": "superRare", "stat": "WarChest" },
+    { "belongTo": ["Chaos"], "effect": [{ "nbr": -10, "isPrct": true, "stat": "Luck", "detail": "Travel Time when assigned to Castle", "on": "Building" }], "rarity": "superRare", "stat": "King" },
+    { "belongTo": ["Chaos"], "effect": [{ "nbr": 5000000, "isPrct": false, "stat": "Luck", "detail": "Load capacity", "on": "Hero" }], "rarity": "god", "stat": "DemonicChest" },
+    { "belongTo": ["Chaos"], "effect": [{ "nbr": 30, "isPrct": true, "stat": "Damage", "detail": "Damage Part-Time Angels Attack First", "on": "Armies" }], "rarity": "god", "stat": "WarChest" },
+    
+    { "belongTo": ["Hera"], "effect": [{ "nbr": 34, "isPrct": true, "stat": "Speed", "on": "Hero" }], "rarity": "uncommon", "stat": "Speed" },
+    { "belongTo": ["Hera"], "effect": [{ "nbr": 150, "isPrct": true, "stat": "Iron", "detail": "When assigned to Iron Mine", "on": "Building" }, { "nbr": 100, "isPrct": true, "stat": "Wood", "detail": "When assigned to Iron Mine", "on": "Building" }], "rarity": "god", "stat": "Iron" },
+    { "belongTo": ["Hera"], "effect": [{ "nbr": 200, "isPrct": true, "stat": "Iron", "on": "Hero" }, { "nbr": 200, "isPrct": true, "stat": "Strenght", "on": "Building" }], "rarity": "god", "stat": "Intellect" },
+    
+    
+    { "belongTo": ["Prometheus"], "effect": [{ "nbr": 35, "isPrct": true, "stat": "MagicArmor", "detail": "Magic Armor of Every Branch", "on": "Armies" }], "rarity": "rare", "stat": "MagicArmor" },
+    { "belongTo": ["Prometheus"], "effect": [{ "nbr": 110, "isPrct": true, "stat": "MagicArmor", "detail": "Magic Armor of Every Branch", "on": "Armies" }], "rarity": "god", "stat": "MagicArmor" },
+    { "belongTo": ["Prometheus"], "effect": [{ "nbr": 270, "isPrct": true, "stat": "Speed", "detail": "of Wizardry", "on": "Armies" }], "rarity": "god", "stat": "Damage" },
+    { "belongTo": ["Prometheus"], "effect": [{ "nbr": 80, "isPrct": true, "stat": "Damage", "detail": "of Wizards and attacks Stupid Titans first", "on": "Armies" }], "rarity": "superRare", "stat": "WarChest" },
+    
+    
+    { "belongTo": ["Briareus"], "effect": [{ "nbr": 40, "isPrct": true, "stat": "Speed", "detail": "of Artillery", "on": "Armies" }], "rarity": "uncommon", "stat": "Damage" },
+    { "belongTo": ["Briareus"], "effect": [{ "nbr": 150, "isPrct": true, "stat": "HP", "detail": "of Stupid Titan", "on": "Armies" }], "rarity": "uncommon", "stat": "HP" },
+    // { "belongTo": ["Heracles"], "effect": [{ "nbr": 30, "isPrct": true, "stat": "Strenght", "on": "Hero" }, { "nbr": -90, "isPrct": true, "stat": "Intellect", "on": "Hero" }], "rarity": "uncommon", "stat": "Charm" },
+    // { "belongTo": ["Heracles"], "effect": [{ "nbr": 70, "isPrct": true, "stat": "Damage", "on": "Hero" }, { "nbr": -90, "isPrct": true, "stat": "Control", "on": "Hero" }], "rarity": "rare", "stat": "Damage" },
+    // { "belongTo": ["Heracles"], "effect": [{ "nbr": 200, "isPrct": true, "stat": "Damage", "on": "Hero" }, { "nbr": 100, "isPrct": true, "stat": "HP", "on": "Hero" }], "rarity": "god", "stat": "Damage" },
+    
+    { "belongTo": ["Dionysus"], "effect": [{ "nbr": 75, "isPrct": true, "stat": "Damage", "on": "Hero" }], "rarity": "rare", "stat": "Damage" },
+    { "belongTo": ["Dionysus"], "effect": [{ "nbr": 75, "isPrct": true, "stat": "Armor", "detail": "Heavy Armor", "on": "Hero" }], "rarity": "rare", "stat": "Armor" },
+    { "belongTo": ["Dionysus"], "effect": [{ "nbr": 30, "isPrct": true, "stat": "Control", "on": "Hero" }, { "nbr": -99, "isPrct": true, "stat": "Luck", "detail": "Politics", "on": "Hero" }], "rarity": "uncommon", "stat": "Charm" },
+    { "belongTo": ["Dionysus"], "effect": [{ "nbr": 300, "isPrct": true, "stat": "Damage", "detail": "of Wizards attack Wizard first", "on": "Armies" }], "rarity": "god", "stat": "Damage" },
+    
+    
+    { "belongTo": ["Hades"], "effect": [{ "nbr": -12, "isPrct": true, "stat": "Drill", "detail": "when assigned to Arsenal", "on": "Building" }], "rarity": "god", "stat": "Drill" },
+    { "belongTo": ["Hades"], "effect": [{ "nbr": -10, "isPrct": true, "stat": "Research", "detail": "when assigned to Laboratory", "on": "Building" }], "rarity": "god", "stat": "Research" },
+    { "belongTo": ["Hades"], "effect": [{ "nbr": 150, "isPrct": true, "stat": "Armor", "detail": "of Stupid Titans", "on": "Armies" }, { "isPrct": true, "nbr": 80, "stat": "Damage", "detail": "of Stupid Titans", "on": "Armies" }], "rarity": "god", "stat": "Armor" },
+    { "belongTo": ["Hades"], "effect": [{ "nbr": 75000, "isPrct": true, "stat": "Iron", "detail": "When assigned to Castle", "on": "Building" }], "rarity": "god", "stat": "DemonicChest" },
+    { "belongTo": ["Gaia"], "effect": [{ "nbr": 3000000, "isPrct": false, "stat": "HP", "detail": "Rempart HP to the Castle when assigned to Castle", "on": "Building" }], "rarity": "god", "stat": "King" },
+    { "belongTo": ["Gaia"], "effect": [{ "nbr": 200, "isPrct": true, "stat": "Luck", "detail": "All Ressource when assigned to Castle", "on": "Building" }], "rarity": "god", "stat": "King" },
+    { "belongTo": ["Gaia"], "effect": [{ "nbr": 220, "isPrct": true, "stat": "Damage", "detail": "of Stupid Titan", "on": "Armies" }], "rarity": "god", "stat": "Damage" },
+    { "belongTo": ["Zeus"], "effect": [{ "nbr": 50, "isPrct": true, "stat": "Speed", "on": "Hero" }, { "nbr": 80, "isPrct": true, "stat": "Armor", "detail": "Light Armor", "on": "Hero" }], "rarity": "rare", "stat": "Speed" },
+    { "belongTo": ["Zeus"], "effect": [{ "nbr": 300, "isPrct": true, "stat": "Vitality", "on": "Hero" }], "rarity": "rare", "stat": "Vitality" },
+    { "belongTo": ["Zeus"], "effect": [{ "nbr": 300, "isPrct": true, "stat": "Damage", "detail": "of every branch", "on": "Armies" }], "rarity": "superRare", "stat": "Damage" },
 ]
 
 

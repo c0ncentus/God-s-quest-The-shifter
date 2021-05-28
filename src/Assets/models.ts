@@ -1,8 +1,8 @@
 const Arr_EffectOn_const = ["Hero", "Armies", "Building", "other"] as const;
 const Arr_RaritySkill_const = ["banal", "uncommon", "rare", "superRare", "god"] as const;
 const Arr_StatSkill_const = [
-    "Armor", "Charm", "Control", "Damage", "DemonicChest", "Dextirity", "Drill", "Empty",
-    "FlameControl", "Food", "GodCharm", "Gold", "GoldChest", "HP", "Intellect", "Iron",
+    "Armor", "Charm", "Control", "Damage", "DemonicChest", "Dextirity", "Drill", "Empty", "Fame",
+    "FlameControl", "Food", "GodCharm", "Gold", "GoldChest", "HP", "Intellect", "Iron", "MagicArmor",
     "King", "Research", "Shield", "Speed", "Trade", "Vitality", "WarChest", "Wood", "Strenght", "Luck"
 ] as const;
 
@@ -11,8 +11,8 @@ const Arr_RaritySkill = ["banal", "uncommon", "rare", "superRare", "god"];
 
 
 const Arr_StatSkill = [
-    "Armor", "Charm", "Control", "Damage", "DemonicChest", "Dextirity", "Drill", "Empty",
-    "FlameControl", "Food", "GodCharm", "Gold", "GoldChest", "HP", "Intellect", "Iron",
+    "Armor", "Charm", "Control", "Damage", "DemonicChest", "Dextirity", "Drill", "Empty", "Fame",
+    "FlameControl", "Food", "GodCharm", "Gold", "GoldChest", "HP", "Intellect", "Iron", "MagicArmor",
     "King", "Research", "Shield", "Speed", "Trade", "Vitality", "WarChest", "Wood", "Strenght", "Luck"
 ];
 
@@ -27,16 +27,16 @@ export interface CapacitySkillProps {
     belongTo: string[];
     rarity: RaritySkill;
     stat: StatSkill;
-    effect: {
-        nbr: number;
-        isPrct: boolean;
-        stat: StatSkill;
-        detail?: string;
-        on: EffectOn;
-    }[]
+    effect: EffectSkill[]
 }
 
-
+export interface EffectSkill {
+    nbr: number;
+    isPrct: boolean;
+    stat: StatSkill;
+    detail?: string;
+    on: EffectOn;
+}
 export const formSkillScheme = {
     "title": "A Skill Heroes Form",
     "description": "All response goes will be send by email",

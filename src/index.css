@@ -1,18 +1,13 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
-
-
 
 .ListWowify_Cpnt h1 {
 	font-size: 2em;
@@ -88,4 +83,399 @@ code {
 	font-family: 400 15px, 22px, Pompei New W00 Light, serif;
 	font-size: 2rem;
 	width: 65%;
+}
+
+.DiamondSentence_Cpnt {
+	width: 450px;
+	position: relative;
+	box-sizing: border-box;
+}
+
+.DiamondSentence_Cpnt .mx-img {
+	object-position: center;
+	object-fit: cover;
+	width: 100%;
+	height: initial;
+	mix-blend-mode: luminosity;
+	filter: brightness(0.8) contrast(0.6);
+	min-height: 180px;
+}
+
+.DiamondSentence_Cpnt .mx-h {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	display: grid;
+	place-items: center;
+}
+
+.DiamondSentence_Cpnt .mx-h h1 {
+	margin: 5px 0px;
+	font: 600 60px/80% 'poppins';
+	text-transform: uppercase;
+	letter-spacing: -3px;
+	color: #191919;
+	align-self: end;
+}
+
+.DiamondSentence_Cpnt .mx-h h2 {
+	padding: 9px 12px;
+	background: rgba(203, 203, 203, 0.45);
+	color: #2e2e2e;
+	border: 2px solid rgba(0, 0, 0, 0.3);
+	margin: 5px 0;
+	align-self: start;
+	font: 600 22px/100% 'Karla';
+}
+
+.DiamondSentence_Cpnt .mx-cont {
+	padding: 15px;
+	color: #c1c1c1;
+	font: 500 14px/145% 'Open Sans';
+	letter-spacing: .6px;
+}
+
+.DiamondSentence_Cpnt .mx-cont h1 {
+	letter-spacing: 0.6px;
+	margin: 15px 0;
+	font-size: 33px;
+	line-height: 100%;
+	font-family: 'Poppins';
+	position: relative;
+	padding-left: 43px;
+	color: RGB(204, 112, 96);
+}
+
+.DiamondSentence_Cpnt .mx-cont h1::before {
+	content: '';
+	width: 24px;
+	height: 24px;
+	background-color: RGB(204, 112, 96);
+	background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/checkerboard-cross.png");
+	background-size: 150px;
+	background-blend-mode: color;
+	background-blend-mode: color-burn;
+	position: absolute;
+	top: 6px;
+	left: -9px;
+	transform: rotate(45deg);
+}
+
+.DiamondSentence_Cpnt .mx-cont h1.mx-ov {
+	color: #9f9f9f;
+}
+
+.DiamondSentence_Cpnt .mx-cont h1.mx-ov::before {
+	background-color: #9f9f9f;
+}
+
+.DiamondSentence_Cpnt section {
+	border-left: 6px solid RGB(204, 112, 96);
+	padding-left: 15px;
+}
+
+.DiamondSentence_Cpnt section b {
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 12.5px;
+}
+
+.DiamondSentence_Cpnt section u {
+	text-decoration: none;
+	border-bottom: 1px dotted RGB(204, 112, 96, 0.75);
+}
+
+.DiamondSentence_Cpnt section.mx-ov {
+	border-left-color: #9f9f9f;
+}
+
+.DiamondSentence_Cpnt section.mx-ov p {
+	margin: 2.5px 0;
+}
+
+.DiamondSentence_Cpnt section.mx-ov u {
+	font-weight: 600;
+}
+
+.CardBoxRound_Cpnt {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	color: #222;
+	text-align: center;
+	padding: 60px;
+	width: 570px;
+	margin: 0 auto;
+	overflow: hidden;
+	box-sizing: border-box;
+	border-radius: 0 0 15px 15px;
+}
+
+.CardBoxRound_Cpnt u {
+	background: var(--synccolor, "#d44727");
+	padding: 2.5px;
+	color: #fff;
+	text-decoration: none;
+	border-bottom: 2px solid #fff;
+}
+
+.CardBoxRound_Cpnt .syncship5-section u {
+	font-weight: 600;
+	letter-spacing: 0.5px;
+}
+
+.CardBoxRound_Cpnt .syncship5-section i, .CardBoxRound_Cpnt .syncship5-section b {
+	color: var(--synccolor, "#d44727");
+}
+
+.CardBoxRound_Cpnt .syncship5-section b {
+	text-transform: uppercase;
+	font-size: 10px;
+	font-weight: 900;
+}
+
+.CardBoxRound_Cpnt .syncship5-img {
+	position: relative;
+	width: 130px;
+	height: 130px;
+	float: left;
+	border: 3px #fafafa solid;
+	border-radius: 5px;
+	margin-right: 20px;
+}
+
+.CardBoxRound_Cpnt .syncship5-img:before {
+	position: absolute;
+	content: "";
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	backdrop-filter: grayscale(1) brightness(1.25) contrast(0.65);
+}
+
+.CardBoxRound_Cpnt .syncship5-name {
+	font: 800 30px Poppins;
+	text-transform: uppercase;
+	color: #454545;
+	text-align: right;
+	border-bottom: 3px solid #fafafa;
+	margin-bottom: 25px;
+}
+
+.CardBoxRound_Cpnt .syncship5-about {
+	text-align: left;
+	color: #fff;
+	font-size: 13px;
+	font-family: poppins;
+	letter-spacing: 0.5px;
+	text-shadow: 0 0 0.7px #fff;
+	min-height: 63px;
+	margin-bottom: 50px;
+}
+
+.CardBoxRound_Cpnt .syncship5-section {
+	background: #fafafa;
+	border-top: 10px solid;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+	transform: skewy(-5deg);
+	position: relative;
+	left: -60px;
+	width: calc(100% + 120px);
+	padding: 55px 70px;
+	box-sizing: border-box;
+	text-align: left;
+	font: 12.5px/140% Roboto;
+	color: #6a6a6a;
+	margin: 25px 0;
+}
+
+.CardBoxRound_Cpnt .syncship5-section>section {
+	transform: skewy(5deg);
+}
+
+.CardBoxRound_Cpnt .syncship5-section:nth-of-type(odd) {
+	transform: skewy(5deg);
+	text-align: right;
+}
+
+.CardBoxRound_Cpnt .syncship5-section:nth-of-type(odd)>section {
+	transform: skewy(-5deg);
+}
+
+.CardBoxRound_Cpnt .syncship5-section h1 {
+	background: -webkit-linear-gradient( -44deg, var(--synccolor), "#d44727", rgb(var(--syncRGBcolor, 212, 114, 116), 0.5));
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font: 800 42px Poppins;
+	display: inline-block;
+	margin: 15px;
+	text-transform: lowercase;
+}
+
+.CardBoxRound_Cpnt .syncship5-section>section>div {
+	text-align: left;
+	padding: 0px 15px;
+	overflow: auto;
+	max-height: 180px;
+}
+
+.CardBoxRound_Cpnt .syncship5-section>section>div::-webkit-scrollbar {
+	width: 7px;
+}
+
+.CardBoxRound_Cpnt .syncship5-section>section>div::-webkit-scrollbar-track {
+	border-radius: 7px;
+	background: #e5e5e5;
+}
+
+.CardBoxRound_Cpnt .syncship5-section>section>div::-webkit-scrollbar-thumb {
+	border-radius: 7px;
+	background: linear-gradient( rgb(212, 114, 116, 1), rgb(212, 114, 116, 0.5))
+}
+
+.CardBoxRound_Cpnt .syncship5-section h1 b {
+	text-transform: lowercase;
+	font-size: 42px;
+	font-weight: 300;
+}
+
+img.active {
+	outline: 5px solid crimson
+}
+
+.glassEffect {
+    display: flex;
+  }
+  
+  .glassEffect .container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 240px;
+    margin: 0 !important;
+  }
+  
+  .glassEffect .btn {
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 45px;
+    max-width: 160px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+  }
+  
+  .glassEffect .btn:hover {
+    text-decoration: none;
+  }
+  
+  /*btn_background*/
+  
+  .glassEffect .effect01 {
+    color: #FFF;
+    border: 4px solid #000;
+    box-shadow: 0px 0px 0px 1px #000 inset;
+    background-color: #000;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .glassEffect .effect01:hover {
+    border: 4px solid #666;
+    background-color: #FFF;
+    box-shadow: 0px 0px 0px 4px #EEE inset;
+  }
+  
+  /*btn_text*/
+  
+  .glassEffect .effect01 span {
+    transition: all 0.2s ease-out;
+    z-index: 2;
+  }
+  
+  .glassEffect .effect01:hover span {
+    letter-spacing: 0.13em;
+    color: #333;
+  }
+  
+  /*highlight*/
+  
+  .glassEffect .effect01:after {
+    background: #FFF;
+    border: 0px solid #000;
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: .8;
+    position: absolute;
+    top: -50px;
+    -webkit-transform: rotate(35deg);
+    transform: rotate(35deg);
+    width: 50px;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    /*easeOutCirc*/
+    z-index: 1;
+  }
+  
+  .glassEffect .effect01:hover:after {
+    background: #FFF;
+    border: 20px solid #000;
+    opacity: 0;
+    left: 120%;
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+  }
+
+  .ClassDoubleText_Cpnt .grim-expro {
+	padding: 70px;
+	font-family: Roboto;
+	font-size: 11px;
+	line-height: 160%;
+	width: max-content;
+	height: max-content;
+}
+
+.ClassDoubleText_Cpnt .grim-expro h1 {
+	position: relative;
+	z-index: 0;
+	font-size: 85px;
+	font-weight: 900;
+	color: #555;
+	padding-bottom: 15px;
+	padding-right: 40px;
+	margin: 0px 0px 0px 0px;
+	text-align: right;
+	opacity: 0.2;
+}
+
+.ClassDoubleText_Cpnt .grim-expro h2 {
+	margin: -30px 50px 0px -90px;
+	color: #666666;
+	padding: 10px 0px;
+	float: right;
+	position: relative;
+	z-index: 1;
+	float: right;
+	font: 900 56px/50px Roboto;
+}
+
+.ClassDoubleText_Cpnt .grim-expro i {
+	color: #7f7f7f;
+}
+
+.DiamondSentence_Cpnt {
+	width: 450px;
+	position: relative;
+	box-sizing: border-box;
+	background-color: #333;
+	border-radius: 5%;
 }
