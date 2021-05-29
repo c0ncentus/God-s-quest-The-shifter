@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { RaritySkilltoColorBorder } from '../Assets/convertion';
 import { capacitySkill, heroes } from '../Assets/data';
+import { Glass } from './Util/All';
 import { CardBoxRound } from './Util/OneHeroe_Prez';
 import { DiamondSentence } from './Util/OneHeroe_Skill';
 import { ClassDoubleText } from './Util/OneHeroe_Title';
 import { constructSkillMessage, effectMessage } from './Util/SkillSelection';
 
-class OneHeroes extends Component<{ name: string }, any> {
+class OneHeroes extends Component<{ name: string, onClick: any }, any> {
 
     render() {
         const starOfHeroes = 8;
@@ -26,6 +27,7 @@ class OneHeroes extends Component<{ name: string }, any> {
                 bg: "linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)"
             }} />
             <DiamondSentence items={DiamondItem} />
+            <Glass text="<- Back" onClick={this.props.onClick} />
 
         </div>
         );

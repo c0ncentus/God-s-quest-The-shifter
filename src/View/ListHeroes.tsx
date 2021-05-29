@@ -1,35 +1,33 @@
 import React, { Component } from 'react';
-import { capacitySkill, heroes } from '../Assets/data';
+import { FormSkill } from './Forms';
 import OneHeroes from './OneHeroes';
-import { Glass } from './Util/All';
-import { ListWowify } from './Util/ManyHeroes';
-import SkillSelection from './Util/SkillSelection';
+import { ListStarHeroes } from './Util/ManyHeroes';
 
 class ListHeroes extends Component<any, { nameHero: string | null }> {
   constructor(props: any) {
-    super(props)
+    super(props);
+    this.setNull = this.setNull.bind(this);
+    this.setHero = this.setHero.bind(this);
     this.state = { nameHero: null }
+  }
+
+  setNull() {
+    this.setState({ nameHero: null })
+  }
+  setHero(nameHero: string) {
+    this.setState({ nameHero })
   }
   render() {
     return (<div style={{ width: "100vw" }}>
       {this.state.nameHero === null
-        ? <ListWowify {...{
-          col: 3, colorLine: "green", items: Object.keys(heroes["Eight"]).map((elHeroName) => {
-            const skillHeroes = capacitySkill.filter(x => x.belongTo.includes(elHeroName))
-            return {
-              colorBox: "crimson",
-              title: elHeroName,
-              line: [<SkillSelection items={skillHeroes} />, <Glass {...{
-                text: "More", onClick: (() => {
-                  this.setState({ nameHero: elHeroName })
-                })
-              }} />],
-              img: heroes["Eight"][elHeroName],
-              letter: elHeroName[0]
-            }
-          }),
-        }} />
-        : <OneHeroes name={this.state.nameHero} />
+        ? <>
+
+          {/* <FormSkill /> */}
+          <ListStarHeroes stars={8} onClick={this.setHero } />
+          <ListStarHeroes stars={7} onClick={this.setHero } />
+          <ListStarHeroes stars={6} onClick={this.setHero } />
+        </>
+        : <OneHeroes name={this.state.nameHero} onClick={() => { this.setNull() }} />
       }
     </div>
     );

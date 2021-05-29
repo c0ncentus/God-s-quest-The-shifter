@@ -21,7 +21,7 @@ const Arr_StatSkill = [
 export type EffectOn = typeof Arr_EffectOn_const[number];
 export type RaritySkill = typeof Arr_RaritySkill_const[number];
 export type StatSkill = typeof Arr_StatSkill_const[number]
-export type Star = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
+export type StarsHeroes = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8
 export interface CapacitySkillProps {
     name?: string;
     belongTo: string[];

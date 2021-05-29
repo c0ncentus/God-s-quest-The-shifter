@@ -1,4 +1,9 @@
-import { Component, CSSProperties } from "react";
+import React, { Component, CSSProperties } from "react";
+import { StarsHeroestoFolder } from "../../Assets/convertion";
+import { capacitySkill, heroes } from "../../Assets/data";
+import { StarsHeroes } from "../../Assets/models";
+import { Glass } from "./All";
+import SkillSelection from "./SkillSelection";
 
 export interface ItemListWowifyProps {
     title: string,
@@ -63,5 +68,42 @@ export class ListWowify extends Component<ListWowifyProps, ListWowifyState>{
                 </div>
             })}
         </div >
+    }
+}
+
+
+export class ListStarHeroes extends Component<{ onClick: any, stars: StarsHeroes }, { isHide: boolean }>{
+    constructor(props: any) {
+        super(props);
+        this.state = { isHide: true }
+    }
+    render() {
+        const { onClick, stars } = this.props;
+        const nameStar = StarsHeroestoFolder[this.props.stars];
+        return <div>
+
+            <div style={{ display: "flex" }}>
+                <h1 style={{ fontSize: 120 }}>{stars} stars</h1>
+                <Glass text={this.state.isHide ? "Show" : "Hide"} onClick={() => { this.setState({ isHide: !this.state.isHide }) }} />
+            </div>
+            <div  style={{ transition: "all 3s", width: this.state.isHide ? 0 : "max-content", overflow: "hidden", height: this.state.isHide ? 0 : "max-content" }}>
+                <ListWowify {...{
+                    col: 3, colorLine: "green", items: Object.keys(heroes[nameStar]).map((elHeroName) => {
+                        const skillHeroes = capacitySkill.filter(x => x.belongTo.includes(elHeroName))
+                        return {
+                            colorBox: "crimson",
+                            title: elHeroName,
+                            line: [<SkillSelection items={skillHeroes} />, <Glass {...{
+                                text: "More", onClick: (() => {
+                                    onClick(elHeroName)
+                                })
+                            }} />],
+                            img: heroes[nameStar][elHeroName],
+                            letter: elHeroName[0]
+                        }
+                    }),
+                }} />
+            </div>
+        </div>
     }
 }

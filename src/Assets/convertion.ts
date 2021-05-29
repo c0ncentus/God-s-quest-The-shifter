@@ -5,3 +5,7 @@ export const RaritySkilltoColorBorder = {
     superRare: "#d100ed",
     god: "orange",
 }
+
+export const StarsHeroestoFolder = [
+    "Zero", "One", "Two", "THree", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"
+]
